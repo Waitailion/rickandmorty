@@ -5,12 +5,10 @@ import "../../App.scss";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
-      <div className="container">
-        <Link to="/" className="navbar-brand color-primary fs-2 ">
-          Rick and Morty
-        </Link>
+      <div className="container justify-content-center">
+       
 
-        <div className="justify-content-end" id="navbarNavAltMarkup">
+        <div className="" id="navbarNavAltMarkup">
           <div className="navbar-nav fs-3">
             <NavLink to="/" className="nav-link">
               Characters
