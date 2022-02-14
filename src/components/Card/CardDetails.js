@@ -5,8 +5,7 @@ const CardDetails = () => {
   let { id } = useParams();
 
   let [fetchedData, updateFetchedData] = useState([]);
-  let { name, location, origin, gender, image, status, species } =
-    fetchedData;
+  let { name, location, origin, gender, image, status, species } = fetchedData;
 
   let api = `https://rickandmortyapi.com/api/character/${id}`;
 
@@ -32,24 +31,26 @@ const CardDetails = () => {
             return <div className="badge bg-secondary fs-5">{status}</div>;
           }
         })()}
+
         <div className="content">
-          <div className="">
-            <span className="fw-bold">Gender : </span>
-            {gender}
-          </div>
-          <div className="">
-            <span className="fw-bold">Location: </span>
-            {location?.name}
-          </div>
-          <div className="">
-            <span className="fw-bold">Origin: </span>
-            {origin?.name}
-          </div>
-          <div className="">
-            <span className="fw-bold">Species: </span>
-            {species}
-          </div>
-          <div className=""></div>
+          <ul className="list-group list-group-flush">
+            <span className="text-center fw-bold">Gender :</span>
+            <li className="list-group-item text-center text-secondary">
+              {gender}
+            </li>
+            <span className="text-center fw-bold ">Location:</span>
+            <li className="list-group-item text-center text-secondary">
+              {location?.name}
+            </li>
+            <span className="text-center fw-bold">Origin:</span>
+            <li className="list-group-item text-center text-secondary">
+              {origin?.name}
+            </li>
+            <span className="text-center fw-bold">Species:</span>
+            <li className="list-group-item text-center text-secondary">
+              {species}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
